@@ -1,0 +1,38 @@
+[
+    {
+      "Course": "Data Analytics using Python",
+      "Name": "Zamin Aqlim",
+      "Role": "MIS Officer, Ajman Bank",
+      "Testimonial": "The training exceeded expectations. It started with the basics in Python followed by a smooth transition into analytics"
+    },
+    {
+      "Course": "Data Analytics using Python",
+      "Name": "Mohamed Ramzi Rizvan",
+      "Role": "Dubai Islamic Bank",
+      "Testimonial": "Trainer's extensive knowledge & expertise was the right opportunity for me to understand data analysis using Python"
+    },
+    {
+      "Course": "Advanced Excel",
+      "Name": "Mitchell El-Haddad",
+      "Role": "Group Demand Planning Manager, NFPC",
+      "Testimonial": "I was very impressed with the facilitation, the knowledge of the trainer and his attention to detail in Excel"
+    },
+    {
+      "Course": "Designing Instructions, Building Experiences",
+      "Name": "Avinash Babu",
+      "Role": "IT Lead, ISHA Foundation",
+      "Testimonial": "It was very informative and interactive. I don't recall any online session that I have attended which was this engaging"
+    },
+    {
+      "Course": "SQL Primer for Data Analysis",
+      "Name": "Mohamed Rabee",
+      "Role": "Ajman Bank",
+      "Testimonial": "Excellent training and gained very good knowledge today. Really appreciate the trainer who explained very well understanding manner."
+    },
+    {
+      "Course": "Dashboard Creation using Excel",
+      "Name": "Farah Ben Hamouda",
+      "Role": "Central Bank UAE",
+      "Testimonial": "The trainer was very experienced and he was explaining very well and accepting questions."
+    }
+  ]

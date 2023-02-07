@@ -1,0 +1,89 @@
+#hero-inside {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+  background-size: cover;
+  padding-top: 110px;
+}
+#hero-inside .intro-info h2 {
+  color: #413e66;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+#hero-inside .intro-info h2 span {
+  color: #1bb1dc;
+}
+#hero-inside .intro-info .btn-get-started {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1bb1dc;
+  color: #fff;
+}
+#hero-inside .intro-info .btn-get-started:hover {
+  background: #0a98c0;
+}
+#hero-inside .intro-info .btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1bb1dc;
+  color: #fff;
+}
+#hero-inside .intro-info .btn-services:hover {
+  background: #0a98c0;
+}
+
+.blog {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 10px;
+  margin-bottom: 25px;
+}
+.blog .blog_card {
+  width: 300px;
+  min-height: 525px;
+  border: 1px solid lightgray;
+}
+.blog .blog_card img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+pre {
+  background: black;
+  position: relative;
+  margin: 10px 0;
+  padding: 1.75rem 0 1.75rem 1rem;
+  color: white;
+  border-radius: 5px;
+  max-height: 340px;
+  overflow-y: scroll;
+  /* more stuff */
+}
+pre button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  /* more stuff */
+}/*# sourceMappingURL=blog.css.map */

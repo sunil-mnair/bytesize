@@ -1,0 +1,40 @@
+
+{% extends 'base_template.html' %}
+{% block content %}
+
+  <main id="main">
+
+   
+
+    <section class="inner-page pt-4">
+      <div class="container">
+        <div class="blog">
+
+          {% for post in blogs %}
+         
+          <div class="blog_card card">
+            <img src="/static/images/blog/{{post[0]['blogImage']}}" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{post[0]['blogTitle']}}</h5>
+              <p class="card-text">{{(post[0]['blogDescription']|summary)|safe}}</p>
+             <a href="/blog_post/{{post[0]['id']}}" class="btn btn-outline-success btn-sm">Read More</a>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">By {{post[1]['author']}} - Updated {{post[0]['modified_dt']|duration}}</small>
+            </div>
+          </div>
+
+           
+          {% endfor %}
+        </div>
+        
+         
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{
+    "Programming": [
+      "HTML & CSS",
+      "JavaScript",
+      "Python and JAVA"
+    ],
+    "Office Applications": [
+      "Excel Intermediate/Advanced",
+      "Data Consolidation & Analysis with Excel",
+      "Dashboard creation using Excel",
+      "Financial Modelling using Excel"
+    ],
+    "Databases": [
+      "SQL Primer/Advanced",
+      "SQL Programming",
+      "SQL Administration"
+    ],
+    "Analytics & ML": [
+      "Analytics using Python / R",
+      "Data Visualization using Power BI",
+      "Machine Learning and Deep Learning",
+      "Google Analytics"
+    ]
+    ,"Cloud Computing": [
+      "AWS Cloud Practictioner",
+      "MS 365 Fundamentals",
+      "MS Azure Administration"
+    ]
+    ,
+    "New Technologies": [
+      "Blockchain",
+      "Crypto and NFT's 101",
+      "Web 3.0 101",
+      "Google Analytics"
+    ]
+}

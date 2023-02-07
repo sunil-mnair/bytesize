@@ -1,0 +1,105 @@
+
+{% extends 'base_template.html' %}
+{% block content %}
+
+<section id="hero-inside" class="clearfix">
+    <div class="container d-flex">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-lg-6 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2 style="padding-left: 15px;">{{blog[0]["blogTitle"]}}</h2>
+          <div>
+
+            <p class="col-lg-12 text-justify">
+                {{(blog[0]["blogDescription"]|summary)|safe}}
+            </p>
+
+            <p class="col-lg-12 text-justify">
+                By {{blog[1]["author"]}} - Updated {{blog[0]['modified_dt']|duration}}
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <!-- <img src="/static/images/byte_size_character.png" alt="" class="img-fluid"> -->
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li>{{blog[0]["blogTitle"]}}</li>
+        </ol>
+        <!-- <h2>Blog</h2> -->
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page pt-4">
+        <div class="container my-2">
+            <div class="row">
+              <div class="col-md-8">
+               
+                <p>{{(blog[0]["blogDescription"]|thehtml)|safe}}</p>
+              </div>
+              <div class="col-md-2">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                      Other Posts
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {% for blog in blogs %}
+                      <li class="list-group-item"><a href="{{blog[0]}}">{{blog[1]}}</a></li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+    const copyButtonLabel = "Copy Code";
+
+    let blocks = document.querySelectorAll("pre");
+    let codes = document.querySelectorAll("code");
+    
+    codes.forEach((code) => {
+      code.setAttribute('id', 'code-snippet');
+      
+    });
+   
+    blocks.forEach((block) => {
+    // only add button if browser supports Clipboard API
+    if (navigator.clipboard) {
+      let button = document.createElement("button");
+      button.className = "btn btn-sm btn-success";
+      button.setAttribute('data-clipboard-target', '#code-snippet');
+    
+      button.innerText = copyButtonLabel;
+      block.appendChild(button);
+  
+      button.addEventListener("click", async () => {
+        await copyCode(block);
+      });
+    }
+  });
+  
+   new ClipboardJS('.btn');
+
+  </script>
+{% endblock %}

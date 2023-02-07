@@ -1,0 +1,43 @@
+{% from "render_form_fields.html" import render_field %}
+
+{% extends 'base_template.html' %}
+{% block content %}
+
+<div class="container">
+
+
+    <div class="row justify-content-center align-items-center" style="height:100vh">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <img class="card-img-top" src="/static/images/company_logo.png" height="75px">
+
+                    <h5 class="card-title">Login</h5>
+
+                    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+            <p class="card-text bg-danger pl-3 text-sm text-light"> {{ messages[0] }}</p>
+
+    {% endif %}
+    {% endwith %}
+
+
+                    <form action="/login" method="POST" autocomplete="off">
+                        {{ form.csrf_token }}
+
+                            {{ render_field(form.username,placeholder=form.username.label.text) }}
+                            {{ render_field(form.password,placeholder=form.password.label.text) }}
+
+                        <div class="checkbox">
+                            {{ form.remember }} Remember Me
+                          </div>
+                        <button type="submit" class="btn btn-primary">login</button>
+                    </form>
+                </div>
+            </div>
+
+    </div>
+</div>
+{% endblock %}

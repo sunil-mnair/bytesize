@@ -1,0 +1,227 @@
+{% extends 'base_template.html' %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-lg-6 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2 style="padding-left: 15px;">Byte-Sized Trainings<br>for <span>Professionals!</span></h2>
+          <div>
+
+            <p class="col-lg-12 text-justify style="padding-left:0px !important;">Educator and Author Sunil Nair designs in-demand IT courses by breaking down its complexity.
+              He then delivers it in Byte-Sized format in a highly interactive and engaging manner. 
+              The Byte-Sized trainings make learning easy and enable rapid implementation of new skills.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="/static/images/byte_size_character.png" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+     <!-- ======= Why Us Section ======= -->
+     <section id="why-us" class="why-us section-bg">
+     
+
+      <div class="container">
+        <div class="row counters" data-aos="fade-up" data-aos-delay="100">
+
+          {% for topic, counter in counters.items() %}
+    
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{counter}}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>{{topic}}</p>
+          </div>
+          {% endfor %}
+
+         
+
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img" data-aos="fade-right" data-aos-delay="100">
+              <img src="/static/images/sunil_nair.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+              <h2>Lead Trainer</h2>
+              <h3>Sunil Nair - Author and Educator</h3>
+              <p>Sunil Nair is an Author, Educator and Data Science Professional. His career began in 2002 in Dubai within the IT training sector. He then moved to the corporate world in 2003 taking up IT as a profession. He moved from a management position to eventually co-founding a training company in 2019.</p>
+              <p>Academically, Sunil holds a Master of Marketing with MAHE, Manipal University; and a Post Graduate Diploma in Data Science and Business Analytics from the McCombs School of Business, University of Texas, Austin.</p>
+              <p>When Sunil is not busy Educating or Data Crunching, his keen interest is in practising classical hatha yoga.</p>
+              <!-- <ul>
+                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Trainings</h3>
+          <p>Interactive trainings designed to deliver highly in-demand skills across Programming, Office Applications, Databases, Analytics, Cloud Computing and New Technologies</p>
+        </header>
+
+        <div class="row g-5">
+
+          {% for topic,training in trainings.items() %}
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              
+              <h4 class="title"><a href="">{{topic}}</a></h4>
+              {% for t in training %}
+              <p class="description" style="text-align: center;">{{t}}</p>
+              {% endfor %}
+    
+            </div>
+          </div>
+          {% endfor %}
+
+      </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+   
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container" data-aos="zoom-out">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3 class="cta-title">Training Tailor-Made</h3>
+            <p class="cta-text"> Have a custom training requirement? Let’s get to work.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="/#footer">Contact Sunil</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!--  End Call To Action Section -->
+
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>Students from {{(clients|length)|tens}}+ Institutions</h3>
+        </header>
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            {% for client in clients %}
+            <div class="swiper-slide"><img src="/static/images/logos/{{client}}" class="img-fluid" alt=""></div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>Testimonials</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                {% for t in testimonials %}
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <!-- <img src="/static/img/testimonial-1.jpg" class="testimonial-img" alt=""> -->
+                    <h3>{{t["Name"]}} - {{t["Course"]}}</h3>
+                    <h4>{{t["Role"]}}</h4>
+                    <p>
+                      {{t["Testimonial"]}}
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+                {% endfor %}
+               
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+   
+
+
+
+   
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h3>Recent / Upcoming Schedules</h3>
+          
+        </header>
+
+        <ul class="faq-list" data-aso="fade-up" data-aos-delay="100">
+          
+          {% for s in schedules %}
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">{{s["Date"]}}<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                {{s["Course"]}} - {{s["Days"]}} Program
+              </p>
+            </div>
+          </li>
+          {% endfor %}
+
+        </ul>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+  </main><!-- End #main -->
+  {% endblock %}
+
+  {% block javascript %}
+  {% endblock %}
+  
+
+  
+
+  

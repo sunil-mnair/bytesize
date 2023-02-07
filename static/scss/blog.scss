@@ -1,0 +1,118 @@
+$color_1: #444;
+$color_2: #1bb1dc;
+$color_3: #0a98c0;
+$color_4: #fff;
+$color_5: #413e66;
+$color_6: #555186;
+$color_7: #535074;
+$color_8: #696592;
+$color_9: #111;
+$color_10: #8a87b6;
+$color_11: #f8fcff;
+$color_12: #999;
+$color_13: #6c67a3;
+$color_14: #5f5b96;
+$color_15: #158caf;
+$color_16: black;
+$color_17: red;
+$color_18: #8582a8;
+$font-family_1: "Open Sans", sans-serif;
+$font-family_2: "Montserrat", sans-serif;
+$font-family_3: #1bb1dc;
+$background-color_1: #fff;
+$background-color_2: #ebf1fa;
+$background-color_3: #1bb1dc;
+$background-color_4: white;
+$border-color_1: #1bb1dc;
+$border-top-color_1: #eee;
+
+#hero-inside {
+	width: 100%;
+	height: 70vh;
+	position: relative;
+	background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+	background-size: cover;
+	padding-top: 110px;
+	.intro-info {
+		h2 {
+			color: $color_5;
+			margin-bottom: 40px;
+			font-size: 48px;
+			font-weight: 700;
+			span {
+				color: $color_2;
+			}
+		}
+		.btn-get-started {
+			font-family: $font-family_2;
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			display: inline-block;
+			padding: 10px 32px;
+			border-radius: 4px;
+			transition: 0.5s;
+			color: $color_4;
+			background: #1bb1dc;
+			color: $color_4;
+			&:hover {
+				background: #0a98c0;
+			}
+		}
+		.btn-services {
+			font-family: $font-family_2;
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			display: inline-block;
+			padding: 10px 32px;
+			border-radius: 4px;
+			transition: 0.5s;
+			color: $color_4;
+			background: #1bb1dc;
+			color: $color_4;
+			&:hover {
+				background: #0a98c0;
+			}
+		}
+	}
+}
+
+.blog{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 10px;
+    margin-bottom: 25px;
+    .blog_card{
+        width:300px;
+        min-height:525px;
+        border: 1px solid lightgray;
+    img{
+        width:300px;
+        height:200px;
+        object-fit: cover;
+    }
+    }
+}
+
+pre {
+    background: black;
+    position: relative;
+    margin: 10px 0 ;
+    padding: 1.75rem 0 1.75rem 1rem;
+    color:white;
+    border-radius: 5px;
+    max-height: 340px;
+    overflow-y: scroll;
+    /* more stuff */
+    button{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      /* more stuff */
+    }
+  }
