@@ -18,6 +18,9 @@ from .forms import *
 
 getcwd = os.getcwd()
 
+if 'home' in getcwd:
+    getcwd += '/mysite'
+
 with open(getcwd+'/'+'trainings.json') as file:
     trainings = json.load(file)
 
