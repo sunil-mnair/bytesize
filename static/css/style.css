@@ -121,7 +121,9 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 70px;
+  max-height: 4.4em;
+  object-fit: cover;
+  object-position: center 40%;
 }
 
 #header .social-links {
@@ -1359,6 +1361,12 @@ section {
   padding: 0 0 30px 0;
   font-size: 14px;
   background: #fff;
+}
+
+.footer-info .logo img {
+  max-height: 15em;
+  object-fit: cover;
+  object-position: center 40%;
 }
 
 #footer .footer-top {
