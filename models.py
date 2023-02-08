@@ -17,7 +17,7 @@ from wtforms.widgets import TextArea
 from sqlalchemy import inspect
 from sqlalchemy.orm import backref
 
-from .app import db
+from app import db
 
 # Enable Rich Text Editor
 class CKTextAreaWidget(TextArea):

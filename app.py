@@ -14,7 +14,7 @@ from flask_mail import Mail,Message
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from .forms import *
+from forms import *
 
 getcwd = os.getcwd()
 
@@ -35,7 +35,7 @@ def get_clients():
     for dir in os.scandir(getcwd+'/static/images/logos'):
         if ".png" in dir.name:
             clients.append(dir.name)
-    print(clients)
+   
     return clients
 
 def get_counters():
@@ -63,7 +63,7 @@ app.config['FLASK_ADMIN_SWATCH'] = 'sandstone'
 
 db = SQLAlchemy(app)
 
-from .models import *
+from models import *
 
 login_manager = LoginManager()
 login_manager.login_view = 'login'
@@ -101,12 +101,18 @@ def thehtml(text):
 def duration(mod_dt):
     elapsed = datetime.now() - mod_dt
     
-    if elapsed.seconds//3600 <= 1:
-        return f'{elapsed.seconds//60} minutes ago'
-    elif elapsed.seconds//3600 <= 23:
-        return f'{elapsed.seconds//3600} hours ago'
+    if elapsed.days >= 1 and elapsed.days <=30:
+        return  f'{elapsed.days} days ago'
+    elif elapsed.days >=30:
+        return  f'{elapsed.days//30} months ago'
+    elif elapsed.days >=365:
+        return  f'{elapsed.days//365} years ago'
     else:
-        return  f'{(elapsed.seconds//3600)//24} days ago'
+        if elapsed.seconds//3600 <= 1:
+            return f'{elapsed.seconds//60} minutes ago'
+        elif elapsed.seconds//3600 <= 23:
+            return f'{elapsed.seconds//3600} hours ago'
+        
 
 
 @app.route('/login',methods=['GET','POST'])
@@ -150,7 +156,7 @@ def blog():
     blogs = db.session.query(Blog,Author)\
         .filter(Author.id == Blog.author_id).all()
 
-    print(blogs)
+   
     return render_template('blog.html',
     blogs = blogs)
 
