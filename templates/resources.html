@@ -1,0 +1,33 @@
+
+{% extends 'base_template.html' %}
+{% block content %}
+
+  <main id="main">
+
+
+    <section class="inner-page pt-4">
+      <div class="container">
+        <div class="resources">
+          
+    <h2>Learning Resources</h3>
+      <p>Below are a collection of compiled resources that you can access for Free.</p>
+        {% for theme,resources in res.items() %}
+        <h3 id="{{theme|replace(' ','')}}">{{theme}}</h3>
+        
+        <ul class="list-group list-group-flush">
+          {% for resource in resources %}
+          <li class="list-group-item">{{resource["topic"]}} - <a href="{{resource['url']}}" target="_blank">Download {{resource["type"]}}</a></li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+        </div>
+         
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

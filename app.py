@@ -30,6 +30,9 @@ with open(getcwd+'/'+'testimonials.json') as file:
 with open(getcwd+'/'+'schedules.json') as file:
     schedules = json.load(file)
 
+with open(getcwd+'/'+'res.json') as file:
+    res = json.load(file)
+
 def get_clients():
     clients = []
     for dir in os.scandir(getcwd+'/static/images/logos'):
@@ -173,6 +176,15 @@ def blog_post(id):
 
     return render_template('blog_post.html',
     blog = blog,blogs = blogs)
+
+
+@app.route("/resources")
+def resources():
+    for re,es in res.items():
+        print(re)
+        for e in es:
+            print(f'-{e}')
+    return render_template('/resources.html',res=res)
 
 if __name__ == "__main__":
     app.run(debug=True)

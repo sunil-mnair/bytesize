@@ -1,0 +1,24 @@
+{
+    "Microsoft Excel": [
+        {
+            "topic":"Text Functions",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Text_Functions.xlsx",
+            "description":""
+        }
+    ],
+    "Power Bi": [
+        {
+            "topic":"Merge and Load Multiple Excel Sheets",
+            "type":"Sample Zip",
+            "url":"https://github.com/penroselearning/curriculum/raw/master/professional/PowerBi_Import_Excel_Sheets.zip",
+            "description":""
+        },
+        {
+            "topic":"Merge and Load Multiple Excel Files",
+            "type":"Sample Zip",
+            "url":"https://github.com/penroselearning/curriculum/raw/master/professional/PowerBi_Import_Folder.zip",
+            "description":""
+        }
+    ]
+}
