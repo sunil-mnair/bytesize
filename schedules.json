@@ -2,16 +2,26 @@
     {
       "Date": "06-Feb-2023",
       "Course": "Data Consolidation and Analytics using Excel",
-      "Days": "1"
+      "Days": "1",
+      "End Date":"06-Feb-2023"
     },
     {
         "Date": "10-Feb-2023",
         "Course": "Mentoring Program for HHM",
-        "Days": "7"
+        "Days": "7",
+        "End Date":"24-Mar-2023"
+    }
+    ,
+    {
+        "Date": "20-Feb-2023",
+        "Course": "Product Support Tool Training",
+        "Days": "6",
+        "End Date":"28-Feb-2023"
     },
     {
         "Date": "09-Mar-2023",
         "Course": "Data Consolidation and Analytics using Excel",
-        "Days": "1"
+        "Days": "1",
+        "End Date":"09-Mar-2023"
     }
 ]

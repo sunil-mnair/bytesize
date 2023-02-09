@@ -1255,23 +1255,23 @@ section {
 
 /* Frequently Asked Questions Section
 --------------------------------*/
-#faq {
+#schedules {
   padding: 60px 0;
   overflow: hidden;
 }
 
-#faq .faq-list {
+#schedules .faq-list {
   padding: 0;
   list-style: none;
 }
 
-#faq .faq-list li {
+#schedules .faq-list li {
   border-bottom: 1px solid #edecf4;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
 
-#faq .faq-list .question {
+#schedules .faq-list .question {
   display: block;
   position: relative;
   font-family: #1bb1dc;
@@ -1284,36 +1284,36 @@ section {
   transition: 0.3s;
 }
 
-#faq .faq-list i {
+#schedules .faq-list i {
   font-size: 16px;
   position: absolute;
   left: 0;
   top: -2px;
 }
 
-#faq .faq-list p {
+#schedules .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 25px;
 }
 
-#faq .faq-list .icon-show {
+#schedules .faq-list .icon-show {
   display: none;
 }
 
-#faq .faq-list .collapsed {
+#schedules .faq-list .collapsed {
   color: black;
 }
 
-#faq .faq-list .collapsed:hover {
+#schedules .faq-list .collapsed:hover {
   color: #1bb1dc;
 }
 
-#faq .faq-list .collapsed .icon-show {
+#schedules .faq-list .collapsed .icon-show {
   display: inline-block;
   transition: 0.6s;
 }
 
-#faq .faq-list .collapsed .icon-close {
+#schedules .faq-list .collapsed .icon-close {
   display: none;
   transition: 0.6s;
 }
