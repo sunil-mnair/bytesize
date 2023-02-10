@@ -6,6 +6,26 @@
             "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Text_Functions.xlsx",
             "description":""
         }
+        ,
+        {
+            "topic":"Logical Functions",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Conditional_Functions.xlsx",
+            "description":""
+        },
+        
+        {
+            "topic":"Date Functions",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Date_Functions.xlsx",
+            "description":""
+        },
+        {
+            "topic":"Look Up Functions",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Lookup_Functions.xlsx",
+            "description":""
+        }
     ],
     "Power Bi": [
         {

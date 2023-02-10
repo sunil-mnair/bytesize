@@ -46,8 +46,8 @@ def get_counters():
     return {
         "Focus Areas":len([t for t in trainings.keys()]),
         "Courses":sum(([len(t) for t in trainings.values()])),
-        "Sessions":137,
-        "Students":2186
+        "Sessions":138,
+        "Students":2192
     }
 
 
@@ -180,10 +180,7 @@ def blog_post(id):
 
 @app.route("/resources")
 def resources():
-    for re,es in res.items():
-        print(re)
-        for e in es:
-            print(f'-{e}')
+    
     return render_template('/resources.html',res=res)
 
 if __name__ == "__main__":
