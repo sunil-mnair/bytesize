@@ -25,6 +25,12 @@
             "type":"Exercise",
             "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Lookup_Functions.xlsx",
             "description":""
+        },
+        {
+            "topic":"What-If Analysis",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/WhatIf_Analysis.xlsx",
+            "description":""
         }
     ],
     "Power Bi": [
