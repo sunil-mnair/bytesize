@@ -1,23 +1,20 @@
-$titles: 'Assistant', sans-serif;
-$paragraphs: 'Assistant', sans-serif;
+$titles: 'Open Sans', sans-serif;
+$paragraphs: 'Open Sans', sans-serif;
 $para-font-size: 15px;
 $footer-color: rgb(27, 177, 220);
 
 
-.enrolled-courses {
-    padding-top: 0em 4em 1em 4em;
-}
 
-.enrolled-course {
-    padding: 7em;
+.enrolled-course,.enrolled-courses,.blog_header {
+    padding: 5em 7em;
 }
 
 .courses {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size:31px;
+    justify-content: flex-start;
+    font-size:25px;
 }
 
 .course_dir{
@@ -95,7 +92,7 @@ $footer-color: rgb(27, 177, 220);
 }
 
 .course {
-    width: 25%;
+    width: 20%;
     margin: 1%;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 0px 0px 10px 10px;
@@ -110,7 +107,6 @@ $footer-color: rgb(27, 177, 220);
 .course-img{
     img {
         width: 100%;
-        height: 100%;
       }
 } 
 
@@ -119,7 +115,7 @@ $footer-color: rgb(27, 177, 220);
     text-align: center;
     margin: 10%;
     font-size: 12.5px;
-    h1 {
+    h2 {
         font-size:21px !important;
         margin:15px 0;
       }

@@ -81,18 +81,18 @@ $border-top-color_1: #eee;
 }
 
 .blog{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 10px;
+    justify-content: flex-start;
+    row-gap: 50px;
     margin-bottom: 25px;
     .blog_card{
-        width:300px;
+        width:325px;
         min-height:525px;
         border: 1px solid lightgray;
     img{
-        width:300px;
+        width:325px;
         height:200px;
         object-fit: cover;
     }

@@ -51,35 +51,34 @@
 }
 
 .blog {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  row-gap: 10px;
+  justify-content: flex-start;
+  row-gap: 50px;
   margin-bottom: 25px;
 }
 .blog .blog_card {
-  width: 300px;
+  width: 325px;
   min-height: 525px;
   border: 1px solid lightgray;
 }
 .blog .blog_card img {
-  width: 300px;
+  width: 325px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 pre {
-  background: #EEEEEE;
+  background: black;
   position: relative;
-  margin: 25px 0 25px 0;
+  margin: 10px 0;
   padding: 1.75rem 0 1.75rem 1rem;
-  color: dimgray;
+  color: white;
   border-radius: 5px;
   max-height: 340px;
   overflow-y: scroll;
-  width: 90%;
   /* more stuff */
 }
 pre button {

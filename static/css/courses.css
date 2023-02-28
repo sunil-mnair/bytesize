@@ -1,18 +1,14 @@
 @charset "UTF-8";
-.enrolled-courses {
-  padding-top: 0em 4em 1em 4em;
-}
-
-.enrolled-course {
-  padding: 7em;
+.enrolled-course, .enrolled-courses, .blog_header {
+  padding: 5em 7em;
 }
 
 .courses {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  font-size: 31px;
+  justify-content: flex-start;
+  font-size: 25px;
 }
 
 .course_dir {
@@ -86,7 +82,7 @@
 }
 
 .course {
-  width: 25%;
+  width: 20%;
   margin: 1%;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 0px 0px 10px 10px;
@@ -99,7 +95,6 @@
 
 .course-img img {
   width: 100%;
-  height: 100%;
 }
 
 .course-desc {
@@ -108,7 +103,7 @@
   margin: 10%;
   font-size: 12.5px;
 }
-.course-desc h1 {
+.course-desc h2 {
   font-size: 21px !important;
   margin: 15px 0;
 }
@@ -119,7 +114,7 @@
 p {
   font-size: 15px !important;
   color: black !important;
-  font-family: "Assistant", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   line-height: 200% !important;
 }
 
@@ -192,7 +187,7 @@ p {
 .lesson-description ul li {
   color: black !important;
   font-size: 18px !important;
-  font-family: "Assistant", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .lesson_body {
@@ -211,7 +206,7 @@ p {
   letter-spacing: 1px;
   transition: 0.4s;
   text-transform: uppercase;
-  font-family: "Assistant", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bolder;
 }
 .lesson_body .buttons button:hover {

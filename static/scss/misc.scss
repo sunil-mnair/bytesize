@@ -27,7 +27,7 @@ $border-color_1: #1bb1dc;
 $border-top-color_1: #eee;
 
 #main{
-    margin-top: 100px;
+    margin-top: 50px;
   }
   
 .resources{
@@ -35,3 +35,13 @@ $border-top-color_1: #eee;
     margin-bottom: 25px;
 }
 
+.card{
+  margin: auto;
+  width:25%;
+  .card-body{
+    .card-img-top{
+      height:150px;
+      object-fit: contain;
+    }
+  }
+}
