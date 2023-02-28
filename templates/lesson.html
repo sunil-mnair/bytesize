@@ -1,0 +1,163 @@
+
+{% extends "base_template.html" %}
+{% block content %}
+   
+<main id="main">
+
+        <section class="lesson_body">
+
+                <div style="font-weight: bolder;" class="course_dir">
+                    <a href="/">Home </a> <i>/</i>
+                    <a href="/courses"> Courses </a> <i>/</i>
+                    <a href="/course/{{course.courseName}}"> {{ course.courseName }}</a><i>--</i>
+                    <strong>{{ lesson.lessonName }}</strong>
+                </div>
+
+
+            <div class="lesson-section">
+                <div class="lesson-container">
+
+                    <p>
+                    <div class="lesson-description">
+                        {{ html|safe }}
+                    </div>
+
+                    </p>
+                </div>
+                <div class="lesson-navigation">
+                    <div class="sidenav" id="sidenav">
+                        <p class="sidenav_title">Lessons</p>
+                           {% for l in lessons %}
+                         <a href="/lesson/{{ l.lessonName }}">{{loop.index}}. {{ l.lessonName }}</a>
+                         {% if l.lessonName == lesson.lessonName and h2s %}
+                         <ul class="toc_header">
+                            {% for h2 in h2s%}
+                            <li><a class="toc">{{h2}}</a></li>
+                            {% endfor %}
+                         </ul>
+                         {% endif %}
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="buttons">
+                    {% if lesson.sampleCode1 %}
+                        <button id="sample1">Activity 1</button>
+                    {% endif %}
+                    {% if lesson.sampleCode2 %}
+                        <button id="sample2">Activity 2</button>
+                    {% endif %}
+                    {% if lesson.sampleCode3 %}
+                        <button id="sample3">Activity 3</button>
+                   {% endif %}
+                   {% if lesson.sampleCode4 %}
+                        <button id="sample4">Activity 4</button>
+                    {% endif %}
+
+                </div>
+
+                <iframe src="{{ lesson.sampleCode1 }}" id="sampleOne" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <iframe src="{{ lesson.sampleCode2 }}" id="sampleTwo" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <iframe src="{{ lesson.sampleCode3 }}" id="sampleThree" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <iframe src="{{ lesson.sampleCode4 }}" id="sampleFour" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+                {% if lesson.resources %}
+                <h2>Additional Resources</h2>
+                <p><a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank">Access Additional Resource</a></p>
+                {% endif %}
+
+        </section>
+        </main>
+
+{% endblock %}   
+
+{% block javascript %}
+
+    <script>
+        function sampleOpener() {
+
+            $(document).ready(function() {
+                $("#questionOne").hide();
+
+                $("#question1").click(function() {
+                    $("#questionOne").show();
+                });
+            });
+
+            $(document).ready(function() {
+                $("#gameOne").hide();
+
+                $("#game1").click(function() {
+                    $("#gameOne").show();
+                });
+            });
+
+            $(document).ready(function() {
+                $("#sampleOne").hide();
+
+                $("#sample1").click(function() {
+                    $("#sampleOne").show();
+                    $("#sampleTwo").hide();
+                    $("#sampleThree").hide();
+                    $("#sampleFour").hide();
+                });
+            });
+
+            $(document).ready(function() {
+                $("#sampleTwo").hide();
+
+                $("#sample2").click(function() {
+                    $("#sampleTwo").show();
+                    $("#sampleOne").hide();
+                    $("#sampleThree").hide();
+                    $("#sampleFour").hide();
+                });
+            });
+
+            $(document).ready(function() {
+                $("#sampleThree").hide();
+
+                $("#sample3").click(function() {
+                    $("#sampleThree").show();
+                    $("#sampleOne").hide();
+                    $("#sampleTwo").hide();
+                    $("#sampleFour").hide();
+                });
+            });
+
+            $(document).ready(function() {
+                $("#sampleFour").hide();
+
+                $("#sample4").click(function() {
+                    $("#sampleOne").hide();
+                    $("#sampleTwo").hide();
+                    $("#sampleThree").hide();
+                    $("#sampleFour").show();
+                });
+            });
+        }
+
+        sampleOpener();
+
+
+        var h2s = document.getElementsByTagName("h2");
+        for(var i = 0, max = h2s.length; i < max; i++) 
+        {
+
+            h2s[i].setAttribute("id", h2s[i].textContent.trim().replace(/ /g,"_"));;
+        }
+
+        var tocs = document.getElementsByClassName("toc");
+        for(var i = 0, max = tocs.length; i < max; i++) 
+        {
+            console.log(tocs[i]);
+            tocs[i].setAttribute("href", "#"+tocs[i].textContent.trim().replace(/ /g,"_"));;
+        }
+
+         
+    </script>
+
+{% endblock %}
+  

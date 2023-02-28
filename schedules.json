@@ -3,12 +3,14 @@
       "Date": "06-Feb-2023",
       "Course": "Data Consolidation and Analytics using Excel",
       "Days": "1",
+      "Status":"Confirmed",
       "End Date":"06-Feb-2023"
     },
     {
         "Date": "10-Feb-2023",
         "Course": "Mentoring Program for HHM",
         "Days": "7",
+        "Status":"Confirmed",
         "End Date":"24-Mar-2023"
     }
     ,
@@ -16,12 +18,38 @@
         "Date": "20-Feb-2023",
         "Course": "Product Support Tool Training",
         "Days": "6",
+        "Status":"",
         "End Date":"28-Feb-2023"
     },
     {
         "Date": "09-Mar-2023",
         "Course": "Data Consolidation and Analytics using Excel",
         "Days": "1",
+        "Status":"Confirmed",
         "End Date":"09-Mar-2023"
+    }
+    ,
+    {
+        "Date": "13-Mar-2023",
+        "Course": "PL-400: Microsoft Power Platform Developer",
+        "Days": "5",
+        "Status":"Confirmed",
+        "End Date":"17-Mar-2023"
+    }
+    ,
+    {
+        "Date": "27-Mar-2023",
+        "Course": "Analytics using Python Masterclass",
+        "Days": "2",
+        "Status":"Confirmed",
+        "End Date":"28-Mar-2023"
+    }
+    ,
+    {
+        "Date": "03-Apr-2023",
+        "Course": "20486 -Developing ASP.NET Core MVC Web Applications",
+        "Days": "4",
+        "Status":"",
+        "End Date":"06-Apr-2023"
     }
 ]

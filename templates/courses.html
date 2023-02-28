@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+{% block content %}
+<main id="main">
+
+<section class="enrolled-courses">
+    <div class="container">
+            <div class="courses">
+
+                {% for course in courses %}
+                    <a href="/course/{{ course.courseName|makeID }}" class="course">
+                        <div class="course-img">
+                            <img src="/static/images/{{ course.courseImage}}" alt="">
+                        </div>
+                        <div class="course-desc">
+                            <h2 class="course_name">{{ course.courseName }}</h2>
+                            <h2>{{geo}}</h2>
+                        </div>
+                    </a>
+                {% endfor %}
+
+            </div>
+        </div>
+        </section>
+
+</main>
+{% endblock %}
+
+{% block javascript %}
+<script href="{{url_for('static',filename='js/script.js')}}"></script>
+{% endblock %}

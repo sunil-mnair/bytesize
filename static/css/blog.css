@@ -71,14 +71,15 @@
 }
 
 pre {
-  background: black;
+  background: #EEEEEE;
   position: relative;
-  margin: 10px 0;
+  margin: 25px 0 25px 0;
   padding: 1.75rem 0 1.75rem 1rem;
-  color: white;
+  color: dimgray;
   border-radius: 5px;
   max-height: 340px;
   overflow-y: scroll;
+  width: 90%;
   /* more stuff */
 }
 pre button {

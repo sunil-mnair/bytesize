@@ -15,6 +15,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from forms import *
+from bs4 import BeautifulSoup
 
 getcwd = os.getcwd()
 
@@ -29,6 +30,7 @@ with open(getcwd+'/'+'testimonials.json') as file:
 
 with open(getcwd+'/'+'schedules.json') as file:
     schedules = json.load(file)
+    schedules = [schedule for schedule in schedules if schedule['Status']=='Confirmed']
 
 with open(getcwd+'/'+'res.json') as file:
     res = json.load(file)
@@ -82,6 +84,9 @@ admin = Admin(app,index_view=MainAdminIndexView(),template_mode='bootstrap3')
 admin.add_view(AllModelView(User,db.session))
 admin.add_view(AllModelView(Author,db.session,category="Blog"))
 admin.add_view(BlogView(Blog,db.session,category="Blog"))
+admin.add_view(AllModelView(Course,db.session,category="Course"))
+admin.add_view(LessonView(Lesson,db.session,category="Course"))
+admin.add_view(AllModelView(UserCourse,db.session,category="Course"))
 
 @app.template_filter()
 def tens(x):
@@ -116,7 +121,17 @@ def duration(mod_dt):
         elif elapsed.seconds//3600 <= 23:
             return f'{elapsed.seconds//3600} hours ago'
         
+@app.template_filter()
+def pluralize(number):
+    if int(number) <= 1:
+        return 'min.'
+    else:
+        return 'mins'
 
+@app.template_filter()
+def makeID(name):
+    name = name.replace(" ","_")
+    return name
 
 @app.route('/login',methods=['GET','POST'])
 def login():
@@ -182,6 +197,69 @@ def blog_post(id):
 def resources():
     
     return render_template('/resources.html',res=res)
+
+@app.route('/courses',methods=['GET','POST'])
+def courses():
+
+    courses = db.session.query(Course)\
+        .filter(Course.courseName == 'Javascript Fundamentals').all()
+
+    return render_template("courses.html",
+    courses = courses,
+    title="Courses on ByteSize")
+
+
+@app.route('/course/<string:name>',methods=['GET','POST'])
+def selected_course(name):
+
+    name = name.replace("_"," ")
+    course = db.session.query(Course)\
+        .filter(Course.courseName == name).first()
+   
+    session["course"] = course.id
+
+    html = markdown.markdown(course.courseDescription)
+
+    lessons = db.session.query(Lesson)\
+        .join(Course, Course.id == Lesson.courseId)\
+        .filter(Course.courseName == name)\
+        .order_by(Lesson.lessonOrder).all()
+   
+    return render_template("course.html",
+    lessons = lessons, course = course,
+    html = html,
+    title = course.courseName)
+
+
+@app.route('/lesson/<string:name>',methods=['GET','POST'])
+def viewlesson(name):
+    
+    name = name.replace("_"," ")
+    #lesson = Lesson.query.get_or_404(id)
+    lesson = db.session.query(Lesson).filter(Lesson.lessonName == name).first()
+
+    course = Course.query.get_or_404(lesson.courseId)
+    # courseid = lesson.courseId
+
+    lessons = db.session.query(Lesson)\
+        .join(Course, Course.id == Lesson.courseId)\
+        .filter(Course.id == course.id)\
+        .order_by(Lesson.lessonOrder).all()
+    
+    soup = BeautifulSoup(lesson.lessonDescription, 'html.parser')
+
+    # Find all h2 headings for ToC
+    h2s = [h2.text.strip() for h2 in soup.find_all('h2')]    
+
+    session["lessonNM"] = lesson.lessonName
+
+    html = markdown.markdown(lesson.lessonDescription)
+
+    return render_template("lesson.html",
+    course = course, lesson = lesson,lessons = lessons,html = html,
+    h2s=h2s,
+    title = lesson.lessonName)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
