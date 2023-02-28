@@ -15,7 +15,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from forms import *
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 getcwd = os.getcwd()
 
@@ -246,10 +246,10 @@ def viewlesson(name):
         .filter(Course.id == course.id)\
         .order_by(Lesson.lessonOrder).all()
     
-    soup = BeautifulSoup(lesson.lessonDescription, 'html.parser')
+    # soup = BeautifulSoup(lesson.lessonDescription, 'html.parser')
 
     # Find all h2 headings for ToC
-    h2s = [h2.text.strip() for h2 in soup.find_all('h2')]    
+    # h2s = [h2.text.strip() for h2 in soup.find_all('h2')]    
 
     session["lessonNM"] = lesson.lessonName
 
@@ -257,7 +257,6 @@ def viewlesson(name):
 
     return render_template("lesson.html",
     course = course, lesson = lesson,lessons = lessons,html = html,
-    h2s=h2s,
     title = lesson.lessonName)
 
 

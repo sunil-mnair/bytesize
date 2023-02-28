@@ -29,13 +29,7 @@
                         <p class="sidenav_title">Lessons</p>
                            {% for l in lessons %}
                          <a href="/lesson/{{ l.lessonName }}">{{loop.index}}. {{ l.lessonName }}</a>
-                         {% if l.lessonName == lesson.lessonName and h2s %}
-                         <ul class="toc_header">
-                            {% for h2 in h2s%}
-                            <li><a class="toc">{{h2}}</a></li>
-                            {% endfor %}
-                         </ul>
-                         {% endif %}
+                         
                             {% endfor %}
                     </div>
                 </div>
