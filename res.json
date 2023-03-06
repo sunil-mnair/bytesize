@@ -1,5 +1,5 @@
 {
-    "Microsoft Excel": [
+    "Microsoft Excel - Practice Resources": [
         {
             "topic":"Text Functions",
             "type":"Exercise",
@@ -37,6 +37,72 @@
             "topic":"Pivots and Dashboard",
             "type":"Exercise",
             "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Pivots%20Charts%20and%20Dashboard.xlsb",
+            "description":""
+        }
+    ],
+    "Microsoft Excel - Assignment and Solutions": [
+        {
+            "topic":"Text Functions - Assignment",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Text_Functions.xlsx",
+            "description":""
+        },
+        {
+            "topic":"Text Functions - Solution",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Text_Functions_Solution.xlsx",
+            "description":""
+        }
+        ,
+        {
+            "topic":"Logical Functions - Assignment",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Logical_Functions.xlsx",
+            "description":""
+        },
+        {
+            "topic":"Logical Functions - Solution",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Logical_Functions_Solution.xlsx",
+            "description":""
+        },
+        
+        {
+            "topic":"Date Functions - Assigment",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Date_Functions.xlsx",
+            "description":""
+        },
+        {
+            "topic":"Date Functions - Solution",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Date_Functions_Solution.xlsx",
+            "description":""
+        },
+        {
+            "topic":"Look Up Functions - Assignment",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_LookUp_Functions.xlsx",
+            "description":""
+        }
+        ,
+        {
+            "topic":"Look Up Functions - Solution",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_LookUp_Functions_Solution.xlsx",
+            "description":""
+        },
+        {
+            "topic":"Dashboard - Assignment",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Dashboard.xlsx",
+            "description":""
+        }
+        ,
+        {
+            "topic":"Dashboard - Solution",
+            "type":"Exercise",
+            "url":"https://github.com/sunil-mnair/curriculum/raw/master/excel/Assignment_Dashboard_Solution.xlsx",
             "description":""
         }
     ],
