@@ -20,6 +20,14 @@
         "Days": "6",
         "Status":"",
         "End Date":"28-Feb-2023"
+    }
+    ,
+    {
+        "Date": "06-Mar-2023",
+        "Course": "PL-300 Microsoft Power Bi",
+        "Days": "3",
+        "Status":"Confirmed",
+        "End Date":"08-Mar-2023"
     },
     {
         "Date": "09-Mar-2023",
