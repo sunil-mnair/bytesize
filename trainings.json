@@ -2,15 +2,15 @@
     "Programming": [
       "HTML & CSS",
       "JavaScript",
-      "Python and JAVA",
-      "MS Power Platform"
+      "Python and JAVA"
     ],
     "Office Applications": [
       "Excel Intermediate/Advanced",
       "Data Consolidation & Analysis with Excel",
       "Dashboard creation using Excel",
       "Financial Modelling using Excel",
-      "SharePoint Administration"
+      "SharePoint Administration",
+      "Power Platform (PL100/PL200/PL400)"
     ],
     "Databases": [
       "SQL Primer/Advanced",
@@ -19,7 +19,7 @@
     ],
     "Analytics & ML": [
       "Analytics using Python / R",
-      "Data Visualization using Power BI",
+      "Data Visualization using Power BI - PL300",
       "Machine Learning and Deep Learning",
       "Google Analytics"
     ]

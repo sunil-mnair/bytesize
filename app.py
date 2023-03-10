@@ -48,8 +48,8 @@ def get_counters():
     return {
         "Focus Areas":len([t for t in trainings.keys()]),
         "Courses":sum(([len(t) for t in trainings.values()])),
-        "Sessions":142,
-        "Students":2203
+        "Sessions":147,
+        "Students":2252
     }
 
 

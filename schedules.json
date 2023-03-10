@@ -38,6 +38,14 @@
     }
     ,
     {
+        "Date": "20-Mar-2023",
+        "Course": "Data Analytics using Power Bi",
+        "Days": "2",
+        "Status":"Confirmed",
+        "End Date":"21-Mar-2023"
+    }
+    ,
+    {
         "Date": "27-Mar-2023",
         "Course": "Analytics using Python Masterclass",
         "Days": "2",
